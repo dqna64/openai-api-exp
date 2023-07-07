@@ -21,10 +21,6 @@ export default async function handler (req: NextApiRequest, res: NextApiResponse
             temperature: 1.2
         })
         
-        console.log(chatCompletion.data.choices[0].message)
-
-        console.log(res)
-        
         res.status(200).json({chatCompletionContent: chatCompletion.data.choices[0].message?.content ?? "No content"})
     }
     catch(error: any) {

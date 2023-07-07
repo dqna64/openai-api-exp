@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default async function Home() {
 
-  const response = await fetch('http://localhost:3000/api/chat')
+  const response = await fetch(`${process.env.URL}:${process.env.PORT}/api/chat`)
   const data = await response.json()
   console.log(data)
   
