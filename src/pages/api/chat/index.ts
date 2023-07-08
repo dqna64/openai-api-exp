@@ -1,3 +1,7 @@
+/**
+ * Uses OpenAI's API to generate a chat response to a user's message.
+ */
+
 import openai from '@/utils/openai'
 import { NextApiRequest, NextApiResponse } from 'next'
 
