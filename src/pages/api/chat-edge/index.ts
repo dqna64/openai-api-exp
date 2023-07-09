@@ -18,12 +18,16 @@ const response = await openai.createChatCompletion({
         messages: [
             {
                 role: "system",
-                content: "You are a helpful assistant whose job is to help the user study their areas of interest and learn the most important knowledge in those areas."
+                content: "You are a helpful assistant whose job is to help the user study their areas of interest and learn the most important knowledge in those areas. Keep each response no longer than 75 words."
             },
             {
                 role: "user",
                 content: "I went out into the ocean on a boat yesterday and had a close encounter with a humpback whale. He came up to the boat and looked me right in the eye for a moment, then dove under the boat, swam a hundred metres away, breached in magnificient fashion as if waving us goodbye, then left. Whales are facinating creatures."
-            }
+            },
+            {
+                role: "user",
+                content: "Afterwards, I came back to shore and saw a hotdog stand. Now I am interested in the history of hotdog stands."
+            },
         ],
 
     })

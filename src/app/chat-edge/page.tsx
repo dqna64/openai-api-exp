@@ -4,7 +4,7 @@ import { useChat } from "ai/react";
 
 export default function ChatV2() {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
-    api: "/api/chatv2",
+    api: "/api/chat-edge",
   });
 
   console.log(messages);
